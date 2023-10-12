@@ -14,7 +14,7 @@ export const sliderData: SliderDataType[] = [
   {
     id: "3",
     title: "life is ready",
-    image: require("../public/food_images/slide1.png"),
+    image: require("../public/food_images/slide3.jpg"),
   },
 ];
 
