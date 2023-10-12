@@ -16,7 +16,7 @@ const Navbar = () => {
       </div>
       {/* logo */}
       {/* mobile menu */}
-      <div className="text-xl">👩‍🍳Eat👩‍🍳</div>
+      <div className="text-xl font-bold">👩‍🍳Eat👩‍🍳</div>
       {/* menu */}
       <div className="md:hidden">
         <Menu />
