@@ -8,30 +8,6 @@ export const data = [
     buttonTitle: "Women",
     image: require("../../../public/stethoscope.jpg"),
   },
-  {
-    id: 2,
-    title: "Multivitamins for men",
-    buttonTitle: "Women",
-    image: require("../../../public/medical-prescription.jpg"),
-  },
-  {
-    id: 3,
-    title: "Multivitamins for kids",
-    buttonTitle: "Women",
-    image: require("../../../public/colorful-pills-package.jpg"),
-  },
-  {
-    id: 4,
-    title: "Multivitamins for Age 50+",
-    buttonTitle: "Women",
-    image: require("../../../public/user.png"),
-  },
-  {
-    id: 5,
-    title: "Vegetarian",
-    buttonTitle: "Women",
-    image: require("../../../public/measuring-pulse.jpg"),
-  },
 ];
 
 const page = () => {

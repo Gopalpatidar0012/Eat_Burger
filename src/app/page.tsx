@@ -1,5 +1,5 @@
-import Featured from "@/components/Featured";
 import Offer from "@/components/Offer";
+import Featured from "@/components/featured/Featured";
 import Slider from "@/components/slider/Slider";
 import Image from "next/image";
 
