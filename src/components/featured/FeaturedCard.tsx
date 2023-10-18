@@ -21,7 +21,9 @@ const FeaturedCard = ({
         </h1>
         <p className="lowercase text-center 2xl:p-8">{description}</p>
         <p className="font-bold">$ {price}</p>
-        <div className="bg-red-500 p-2 rounded text-white ">add to cart</div>
+        <div className="bg-red-500 p-2 rounded text-white cursor-pointer">
+          add to cart
+        </div>
       </div>
     </div>
   );

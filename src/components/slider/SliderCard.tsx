@@ -11,7 +11,9 @@ const SliderCard = ({ sliderData, currentSlide }: SliderCardType) => {
         <h1 className="text-5xl text-center ">
           {sliderData[currentSlide].title}
         </h1>
-        <div className="p-2 bg-red-600 text-white rounded">order now</div>
+        <div className="p-2 bg-red-600 text-white rounded cursor-pointer">
+          order now
+        </div>
       </div>
       {/* image section */}
       <div className="flex-1 w-full relative ">

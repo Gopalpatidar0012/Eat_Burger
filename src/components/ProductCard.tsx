@@ -68,11 +68,15 @@ const ProductCard = ({
             <div className="flex justify-between flex-wrap">
               <div>
                 <div className="flex gap-1 font-light text-xs">
-                  <span>MRP</span>
-                  <span className="line-through">{totalPrice}</span>
-                  <span className="text-[#2aa939] font-medium">
-                    {offerPercentage}% off
-                  </span>
+                  {offerPercentage !== 0 ? (
+                    <>
+                      <span>MRP</span>
+                      <span className="line-through">{totalPrice}</span>
+                      <span className="text-[#2aa939] font-medium">
+                        {offerPercentage}% off
+                      </span>
+                    </>
+                  ) : null}
                 </div>
                 <div>
                   <span className="text-xl">{discountPrice}</span>
