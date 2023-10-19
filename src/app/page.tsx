@@ -1,3 +1,4 @@
+import Gallery from "@/components/Gallery";
 import Offer from "@/components/Offer";
 import Featured from "@/components/featured/Featured";
 import Slider from "@/components/slider/Slider";
@@ -9,6 +10,7 @@ export default function Home() {
       <Slider />
       <Featured />
       <Offer />
+      <Gallery />
     </>
   );
 }

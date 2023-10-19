@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import CountDown from "./CountDown";
+import CountDown from "../CountDown";
+import Gallery from "../gallery/Gallery";
 
 const Offer = () => {
   return (

@@ -11,12 +11,18 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/addon-styling-webpack": "^0.0.5",
     "next": "13.5.4",
     "react": "^18",
     "react-countdown-circle-timer": "^3.2.1",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-draggable": "^4.4.6"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.5.0-alpha.6",

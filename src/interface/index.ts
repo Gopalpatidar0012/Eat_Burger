@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface SliderDataType {
   id: string;
   title: string;
@@ -21,4 +23,13 @@ export interface FeaturedProductsType {
   price: number;
   title: string;
   options: { title: string; additionalprice: string }[];
+}
+
+export interface ButtonType {
+  variant: "outline" | "filled" | "text";
+  size: "small" | "medium" | "large";
+  children: ReactNode;
+  icon?: ReactNode;
+  customClasses?: string;
+  iconPosition?: "left" | "right";
 }
