@@ -1,9 +1,10 @@
-import Notification from "@/components/Notification";
+import Notification from "@/components/notification/Notification";
 import "./styles/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/menu/Navbar";
 import Footer from "@/components/Footer";
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,13 +18,52 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const footerData = {
+    cityAddresses: [
+      {
+        id: "1",
+        city: "India",
+        phoneNo: "",
+        address:
+          "Code-Bin, Plot No. 4, S.No. 131/1A/1, Mahavir Park, opp.Orchid School, Baner Pune – 411045",
+      },
+      {
+        id: "2",
+        city: "Canada",
+        address: "826 Brimorton Drive Scarborough ON M1G 2S9 Toronto",
+        phoneNo: "+1 647-773-8546",
+      },
+    ],
+
+    emailId: "info@code-b.in",
+    socialMediaLinks: [
+      {
+        id: "1",
+        url: "your-instagram-url",
+        color: "#C2C2C2",
+        icon: faInstagram,
+        size: "lg",
+      },
+      {
+        id: "2",
+        url: "your-facebook-url",
+        color: "#C2C2C2",
+        icon: faFacebook,
+        size: "lg",
+      },
+    ],
+  };
   return (
     <html lang="en">
       <body className={inter.className}>
         <Notification />
         <Navbar />
         {children}
-        <Footer />
+        <Footer
+          cityAddresses={footerData.cityAddresses}
+          emailId={footerData.emailId}
+          socialMediaLinks={footerData.socialMediaLinks}
+        />
       </body>
     </html>
   );

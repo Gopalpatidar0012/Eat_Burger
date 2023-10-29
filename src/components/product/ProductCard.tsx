@@ -52,11 +52,7 @@ const ProductCard = ({
               <Image src={image} className="" alt="image" />
             ) : (
               <div className="placeholder-image">
-                <Image
-                  src={require("../../public/image-icon-front-side-white-background.jpg")}
-                  className=""
-                  alt="image"
-                />
+                <Image src={""} className="" alt="image" />
               </div>
             )}
           </div>

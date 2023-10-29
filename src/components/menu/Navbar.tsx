@@ -3,6 +3,7 @@ import Menu from "./Menu";
 import CartIcon from "./CartIcon";
 import Image from "next/image";
 import Link from "next/link";
+import Typography, { TypographyVariant } from "../typography/Typography";
 
 const Navbar = () => {
   const user = false;
@@ -25,7 +26,7 @@ const Navbar = () => {
       <div className="hidden md:flex gap-6 justify-center items-center">
         <div className="md:absolute top-4 lg:static flex justify-center items-center gap-2 bg-orange-300 px-1 rounded">
           <Image
-            src={require("../../public/food_images/phone.png")}
+            src={require("../../../public/food_images/phone.png")}
             alt="phone"
             width={20}
             height={20}
@@ -33,9 +34,13 @@ const Navbar = () => {
           <span>123 456 789</span>
         </div>
         {!user ? (
-          <Link href="/login">login</Link>
+          <Link href="/login">
+            <Typography variant={TypographyVariant.P}>Login</Typography>
+          </Link>
         ) : (
-          <Link href="/orders">orders</Link>
+          <Link href="/orders">
+            <Typography variant={TypographyVariant.P}>orders</Typography>
+          </Link>
         )}
         <CartIcon />
       </div>

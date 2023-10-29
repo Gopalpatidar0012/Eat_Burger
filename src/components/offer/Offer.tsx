@@ -26,7 +26,7 @@ const Offer = () => {
       </div>
       <div className="flex-1 w-full relative">
         <Image
-          src={require("../../public/food_images/offerProduct.png")}
+          src={require("../../../public/food_images/offerProduct.png")}
           alt="offer"
           fill
           className="object-contain"
