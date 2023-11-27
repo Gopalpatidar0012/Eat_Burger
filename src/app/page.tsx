@@ -1,3 +1,4 @@
+import CBService from "@/components/CBService/Index";
 import CBInsightGrid from "@/components/Insight/CBInsightGrid";
 import Client from "@/components/client/Client";
 import Featured from "@/components/featured/Featured";
@@ -64,6 +65,7 @@ export default function Home() {
       <Featured />
       {/* <Offer /> */}
       <Gallery />
+      <CBService />
       {/* <CBInsightGrid data={data} /> */}
       {/* <Client /> */}
     </>
