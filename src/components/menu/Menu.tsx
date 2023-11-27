@@ -18,7 +18,7 @@ const Menu = () => {
       <div className="cursor-pointer">
         {!open ? (
           <Image
-            src={require("../../../public/food_images/open.png")}
+            src="/assets/food_images/open.png"
             width={20}
             height={20}
             alt="menu"
@@ -26,7 +26,7 @@ const Menu = () => {
           />
         ) : (
           <Image
-            src={require("../../../public/food_images/close.png")}
+            src="/assets/food_images/close.png"
             width={20}
             height={20}
             alt="menu"

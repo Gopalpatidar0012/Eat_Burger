@@ -18,7 +18,7 @@ export interface FeaturedCardType {
 }
 export interface FeaturedProductsType {
   id: string;
-  img?: HTMLImageElement;
+  img?: string;
   description?: string;
   price: number;
   title: string;

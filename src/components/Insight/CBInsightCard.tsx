@@ -7,7 +7,7 @@
 
 import Image from "next/image";
 import React from "react";
-import placeholderImage from "../../../public/png.png";
+import placeholderImage from "../../../public/assets/png.png";
 import { InsightCardType } from "@/interface/types";
 import Typography, { TypographyVariant } from "../typography/Typography";
 

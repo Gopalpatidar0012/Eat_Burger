@@ -17,8 +17,9 @@ const Gallery = () => {
             <div>
               <Image
                 className="h-auto max-w-full rounded-lg"
-                src={require("../../../public/food_images/slide3.jpg")}
+                src="/assets/food_images/slide3.jpg"
                 alt=""
+                fill
               />
             </div>
           </Draggable>
@@ -26,8 +27,9 @@ const Gallery = () => {
             <div>
               <Image
                 className="h-auto max-w-full rounded-lg"
-                src={require("../../../public/food_images/slide3.jpg")}
+                src="/assets/food_images/slide3.jpg"
                 alt=""
+                fill
               />
             </div>
           </Draggable>
@@ -35,37 +37,9 @@ const Gallery = () => {
             <div>
               <Image
                 className="h-auto max-w-full rounded-lg"
-                src={require("../../../public/food_images/slide3.jpg")}
+                src="/assets/food_images/slide3.jpg"
                 alt=""
-              />
-            </div>
-          </Draggable>
-        </div>
-        <div className="grid gap-4">
-          <Draggable>
-            <div>
-              <Image
-                className="h-auto max-w-full rounded-lg"
-                src={require("../../../public/food_images/slide3.jpg")}
-                alt=""
-              />
-            </div>
-          </Draggable>
-          <Draggable>
-            <div>
-              <Image
-                className="h-auto max-w-full rounded-lg"
-                src={require("../../../public/food_images/slide3.jpg")}
-                alt=""
-              />
-            </div>
-          </Draggable>
-          <Draggable>
-            <div>
-              <Image
-                className="h-auto max-w-full rounded-lg"
-                src={require("../../../public/food_images/slide3.jpg")}
-                alt=""
+                fill
               />
             </div>
           </Draggable>
@@ -75,8 +49,9 @@ const Gallery = () => {
             <div>
               <Image
                 className="h-auto max-w-full rounded-lg"
-                src={require("../../../public/food_images/slide3.jpg")}
+                src="/assets/food_images/slide3.jpg"
                 alt=""
+                fill
               />
             </div>
           </Draggable>
@@ -84,8 +59,9 @@ const Gallery = () => {
             <div>
               <Image
                 className="h-auto max-w-full rounded-lg"
-                src={require("../../../public/food_images/slide3.jpg")}
+                src="/assets/food_images/slide3.jpg"
                 alt=""
+                fill
               />
             </div>
           </Draggable>
@@ -93,8 +69,9 @@ const Gallery = () => {
             <div>
               <Image
                 className="h-auto max-w-full rounded-lg"
-                src={require("../../../public/food_images/slide3.jpg")}
+                src="/assets/food_images/slide3.jpg"
                 alt=""
+                fill
               />
             </div>
           </Draggable>
@@ -104,8 +81,9 @@ const Gallery = () => {
             <div>
               <Image
                 className="h-auto max-w-full rounded-lg"
-                src={require("../../../public/food_images/slide3.jpg")}
+                src="/assets/food_images/slide3.jpg"
                 alt=""
+                fill
               />
             </div>
           </Draggable>
@@ -113,8 +91,9 @@ const Gallery = () => {
             <div>
               <Image
                 className="h-auto max-w-full rounded-lg"
-                src={require("../../../public/food_images/slide3.jpg")}
+                src="/assets/food_images/slide3.jpg"
                 alt=""
+                fill
               />
             </div>
           </Draggable>
@@ -122,8 +101,41 @@ const Gallery = () => {
             <div>
               <Image
                 className="h-auto max-w-full rounded-lg"
-                src={require("../../../public/food_images/slide3.jpg")}
+                src="/assets/food_images/slide3.jpg"
                 alt=""
+                fill
+              />
+            </div>
+          </Draggable>
+        </div>
+        <div className="grid gap-4">
+          <Draggable>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src="/assets/food_images/slide3.jpg"
+                alt=""
+                fill
+              />
+            </div>
+          </Draggable>
+          <Draggable>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src="/assets/food_images/slide3.jpg"
+                alt=""
+                fill
+              />
+            </div>
+          </Draggable>
+          <Draggable>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src="/assets/food_images/slide3.jpg"
+                alt=""
+                fill
               />
             </div>
           </Draggable>

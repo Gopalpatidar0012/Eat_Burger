@@ -26,7 +26,7 @@ const Navbar = () => {
       <div className="hidden md:flex gap-6 justify-center items-center">
         <div className="md:absolute top-4 lg:static flex justify-center items-center gap-2 bg-orange-300 px-1 rounded">
           <Image
-            src={require("../../../public/food_images/phone.png")}
+            src="/assets/food_images/phone.png"
             alt="phone"
             width={20}
             height={20}

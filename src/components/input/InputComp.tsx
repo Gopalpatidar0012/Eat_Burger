@@ -25,7 +25,7 @@ const InputComp = ({
   ...rest
 }: InputProps) => {
   // Base input classes
-  let inputClasses = "rounded px-8 py-2 relative";
+  let inputClasses = "rounded px-8 py-2 relative w-full";
 
   // Handle different sizes
   if (size === "small") {
