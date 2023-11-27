@@ -1,31 +1,33 @@
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { CSSProperties } from 'react';
+import { IconDefinition, SizeProp } from "@fortawesome/fontawesome-svg-core";
+import { CSSProperties } from "react";
 
 export enum ButtonVariant {
-  OUTLINE = 'outline',
-  LINK = 'link',
-  PRIMARY = 'primary',
-  SECONDARY = 'secondary',
+  OUTLINE = "outline",
+  LINK = "link",
+  PRIMARY = "primary",
+  SECONDARY = "secondary",
+  DISABLED = "disabled",
 }
 
 export enum ButtonSize {
-  SMALL = 'small',
-  MEDIUM = 'medium',
-  LARGE = 'large',
+  SMALL = "small",
+  MEDIUM = "medium",
+  LARGE = "large",
 }
 export enum IconPoistion {
-  RIGHT = 'right',
-  LEFT = 'left',
+  RIGHT = "right",
+  LEFT = "left",
 }
 export interface ButtonType {
   variant: ButtonVariant;
   onClick: () => void;
   title: string;
-  iconPosition?: 'left' | 'right';
+  iconPosition?: "left" | "right";
   size?: ButtonSize;
   backgroundColor?: string;
   color?: string;
   icon?: IconDefinition;
+  disabled?: boolean;
 }
 export interface ClientLogoType {
   id: string | number;
@@ -50,20 +52,19 @@ export interface InsightGridDataType {
 export interface ContactType {
   emailId: string;
   title: string;
-  contactIcon: IconDefinition;
+  contactIcon: string;
 }
 
 export interface SocialMediaLinkType {
   id: string;
   url: string;
-  color: string;
-  icon: IconDefinition;
+  name: string;
 }
-
 export interface FooterType {
   cityAddresses: CityAddressType[];
   emailId: string;
   socialMediaLinks: SocialMediaLinkType[];
+  copyrightText: string;
 }
 export interface CityAddressType {
   id: string;
@@ -77,14 +78,24 @@ export interface SocialLinkType {
 }
 
 export interface IconType {
-  icon: IconDefinition;
+  icon: string;
   color?: string;
   additionalClasses?: string;
-  style?: CSSProperties;
+  size?: SizeProp;
+}
+
+export enum SocialMediaIcons {
+  INSTAGRAM = "instagram",
+  FACEBOOK = "facebook",
+  TWITTER = "twitter",
+  MAP = "map",
+  EMAIL = "email",
+  LINKEDIN = "linkedin",
+  SHOPIFY = "shopify",
 }
 
 export interface AddressType {
   cityAddresses: CityAddressType[];
   title: string;
-  addressIcon: IconDefinition;
+  addressIcon: string;
 }

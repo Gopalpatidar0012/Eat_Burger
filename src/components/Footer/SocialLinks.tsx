@@ -19,8 +19,8 @@ const SocialLinks = ({ socialMediaLinks, title }: SocialLinkType) => {
         {socialMediaLinks.map((item) => (
           <Link href={item.url} key={item.id} className="w-6">
             <Icon
-              icon={item.icon}
-              style={{ fontSize: "24px" }}
+              icon={item.name}
+              size="xl"
               additionalClasses="text-lightGray"
             />
           </Link>

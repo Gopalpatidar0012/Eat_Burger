@@ -21,35 +21,46 @@ export default function RootLayout({
   const footerData = {
     cityAddresses: [
       {
+        id: "2",
+        city: "Canada",
+        address: "826 Brimorton DriveScarborough",
+        phoneNo: "+1 647-773-8546",
+        pinCode: "ON M1G 2S9",
+        state: "Toronto",
+      },
+      {
         id: "1",
         city: "India",
         phoneNo: "",
-        address:
-          "Code-Bin, Plot No. 4, S.No. 131/1A/1, Mahavir Park, opp.Orchid School, Baner Pune – 411045",
-      },
-      {
-        id: "2",
-        city: "Canada",
-        address: "826 Brimorton Drive Scarborough ON M1G 2S9 Toronto",
-        phoneNo: "+1 647-773-8546",
+        address: "Plot No. 4, Mahavir Park, Baner",
+        pinCode: "Pune – 411045",
+        state: "Maharashtra",
       },
     ],
 
-    emailId: "info@code-b.in",
+    emailId: "manas@incerro.ai",
+    copyrightText:
+      "Copyright © 2023 Invasion Software Technologies Pvt Ltd. All rights reserved.",
     socialMediaLinks: [
       {
         id: "1",
-        url: "your-instagram-url",
-        color: "#C2C2C2",
-        icon: faInstagram,
-        size: "lg",
+        url: "https://facebook.com/incerro",
+        name: "facebook",
+      },
+      {
+        id: "3",
+        url: "https://www.instagram.com/incerro.ai",
+        name: "instagram",
       },
       {
         id: "2",
-        url: "your-facebook-url",
-        color: "#C2C2C2",
-        icon: faFacebook,
-        size: "lg",
+        url: "https://www.linkedin.com/company/incerro",
+        name: "linkedin",
+      },
+      {
+        id: "4",
+        url: "mailto:manas@incerro.ai",
+        name: "email",
       },
     ],
   };
@@ -63,6 +74,7 @@ export default function RootLayout({
           cityAddresses={footerData.cityAddresses}
           emailId={footerData.emailId}
           socialMediaLinks={footerData.socialMediaLinks}
+          copyrightText={footerData.copyrightText}
         />
       </body>
     </html>

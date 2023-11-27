@@ -1,54 +1,101 @@
-import { ButtonType } from "@/interface";
-import React, { ReactNode } from "react";
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  ButtonSize,
+  ButtonType,
+  ButtonVariant,
+  IconPoistion,
+} from "@/interface/types";
+import Typography, { TypographyVariant } from "../typography/Typography";
 
 const Button = ({
-  variant,
-  size,
-  children,
+  variant = ButtonVariant.PRIMARY,
+  size = ButtonSize.MEDIUM,
+  title,
   icon,
-  customClasses,
-  iconPosition = "left",
+  backgroundColor,
+  color,
+  iconPosition = IconPoistion.RIGHT,
+  onClick,
+  disabled = false,
 }: ButtonType) => {
   // Define base button classes
-  let buttonClasses = "rounded px-4 py-2";
-  let iconClasses = "";
-
-  // Handle different variants
-  if (variant === "outline") {
-    buttonClasses += " border border-gray-400 text-gray-700 hover:bg-gray-100";
-  } else if (variant === "filled") {
-    buttonClasses += " bg-blue-500 text-white hover:bg-blue-700";
-  } else if (variant === "text") {
-    buttonClasses += " text-blue-500";
+  let buttonClasses: string = "";
+  let iconClasses: string = "";
+  switch (variant) {
+    case ButtonVariant.PRIMARY:
+      buttonClasses =
+        "inline-flex justify-center items-center bg-red gap-2 text-white";
+      break;
+    case ButtonVariant.SECONDARY:
+      buttonClasses =
+        "inline-flex justify-center items-center gap-2 bg-black text-white";
+      break;
+    case ButtonVariant.OUTLINE:
+      buttonClasses =
+        "inline-flex justify-center items-center border border-gray-400 gap-2";
+      break;
+    case ButtonVariant.DISABLED:
+      buttonClasses =
+        "inline-flex justify-center items-center bg-lightGray gap-2 text-white";
+      break;
+    case ButtonVariant.LINK:
+      buttonClasses = "inline-flex justify-center items-center gap-2";
+      break;
+    default:
+      break;
   }
 
-  // Handle different sizes
-  if (size === "small") {
-    buttonClasses += " text-sm";
-  } else if (size === "large") {
-    buttonClasses += " text-lg";
+  // Handle different sizes if needed
+  switch (size) {
+    case ButtonSize.SMALL:
+      buttonClasses += " px-2 py-1";
+      iconClasses += " text-sm w-4";
+      break;
+    case ButtonSize.LARGE:
+      buttonClasses += " py-4 px-8";
+      iconClasses += " text-xl w-5";
+      break;
+    default:
+      buttonClasses += " px-4 py-2";
+      iconClasses += " text-base w-4";
+      break;
   }
 
-  // Add custom classes if provided
-  if (customClasses) {
-    buttonClasses += ` ${customClasses}`;
+  if (variant === ButtonVariant.LINK)
+    return (
+      <button
+        onClick={onClick}
+        className={buttonClasses}
+        style={{ backgroundColor, color }}
+        data-testid="custom-button"
+      >
+        {iconPosition === IconPoistion.LEFT && icon && (
+          <FontAwesomeIcon icon={icon} className={iconClasses} />
+        )}
+        <Typography variant={TypographyVariant.TITLE}>{title}</Typography>
+        {iconPosition === IconPoistion.RIGHT && icon && (
+          <FontAwesomeIcon icon={icon} className={iconClasses} />
+        )}
+      </button>
+    );
+  if (disabled === true) {
+    buttonClasses += " bg-lightGray";
   }
-
-  // Determine the icon position
-  if (iconPosition === "right") {
-    iconClasses = "ml-2";
-  } else {
-    iconClasses = "mr-2";
-  }
-
   return (
-    <button className={buttonClasses}>
-      {iconPosition === "left" && icon && (
-        <span className={iconClasses}>{icon}</span>
+    <button
+      className={buttonClasses}
+      style={{ backgroundColor, color }}
+      onClick={onClick}
+      data-testid="custom-button"
+      disabled={disabled}
+    >
+      {iconPosition === IconPoistion.LEFT && icon && (
+        <FontAwesomeIcon icon={icon} className={iconClasses} />
       )}
-      {children}
-      {iconPosition === "right" && icon && (
-        <span className={iconClasses}>{icon}</span>
+      <Typography variant={TypographyVariant.TITLE}>{title}</Typography>
+      {iconPosition === IconPoistion.RIGHT && icon && (
+        <FontAwesomeIcon icon={icon} className={iconClasses} />
       )}
     </button>
   );
